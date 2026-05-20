@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Grit Studios</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="/images/grit-logo.jpg">
+</head>
+<body>
+  <div class="login-page">
+    <div class="login-container">
+      <div class="login-header">
+        <a href="index.html" class="login-brand-logo">Grit Studios</a>
+        <p class="login-subtitle">Wear the hustle. Keep the grit.</p>
+      </div>
+
+      <div class="login-content" id="loginContent">
+        <h1>Login or Create Account</h1>
+        <p class="login-description">Enter your email to login or create a new account</p>
+
+        <form id="loginForm" class="login-form">
+          <div class="form-group">
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" name="email" placeholder="your@email.com" required>
+          </div>
+          <button type="submit" class="button button-solid login-submit-btn">Continue</button>
+        </form>
+
+        <div class="login-divider">or</div>
+
+        <a href="index.html" class="button button-outline login-guest-btn">Continue as Guest</a>
+
+        <p class="login-terms">
+          By logging in, you agree to our terms. <br>
+          <a href="index.html#about">Learn more about Grit Studios</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="login-background"></div>
+  </div>
+
+  <script src="login-script.js"></script>
+</body>
+</html>

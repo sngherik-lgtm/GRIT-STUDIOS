@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grit Studios</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="/images/grit-logo.jpg">
+</head>
+<body>
+
+  <section class="announcement" data-brand="announcement"></section>
+
+  <header class="header">
+    <div class="nav-wrap">
+      <a href="#home" class="brand-logo" data-brand="name"></a>
+
+      <nav class="desktop-nav">
+        <a href="login.html" class="account-link">Account</a>
+        <a href="#shop">Shop</a>
+        <a href="#collections">Collections</a>
+        <a href="#orders">Orders</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="account-info" id="accountInfo"></div>
+        <button class="cart-btn" type="button" aria-label="Shopping cart">
+          <span data-icon="bag"></span>
+          <span class="cart-count">0</span>
+        </button>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-label="Toggle menu" id="menuToggle">
+        <span data-icon="menu"></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <nav>
+        <a href="login.html" class="account-link">Account</a>
+        <a href="#shop">Shop</a>
+        <a href="#collections">Collections</a>
+        <a href="#orders">Orders</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <p class="pill">Streetwear / Custom Prints / Daily Grit</p>
+        <h1>Wear the hustle. Keep the grit.</h1>
+        <p class="hero-text"><span data-brand="tagline"></span> A clothing brand focused on clean streetwear, bold graphics, and pieces that feel personal.</p>
+        <div class="hero-buttons">
+          <button class="button button-solid" type="button">
+            Shop the Drop
+            <span data-icon="arrow"></span>
+          </button>
+          <button class="button button-outline" type="button">View Lookbook</button>
+        </div>
+      </div>
+
+      <div class="hero-card-wrap">
+        <div class="hero-glow"></div>
+        <div class="hero-card-shell">
+          <div class="hero-card">
+            <div class="hero-card-top">
+              <span>Drop 01</span>
+              <span>GRT/STDS</span>
+            </div>
+            <div>
+              <p class="featured-label">Featured Piece</p>
+              <h2>Grit Core Tee</h2>
+            </div>
+            <div class="feature-tags">
+              <div>Cotton</div>
+              <div>Oversized</div>
+              <div>Limited</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="collections" class="collections">
+      <div class="collections-grid" id="collectionsGrid"></div>
+    </section>
+
+    <section id="shop" class="shop">
+      <div class="shop-header">
+        <div>
+          <p class="section-label">Shop</p>
+          <h2 class="section-title">Latest Pieces</h2>
+        </div>
+        <div class="shop-controls">
+          <div class="search-wrap">
+            <span data-icon="search"></span>
+            <input id="productSearch" class="search-input" type="text" placeholder="Search products" />
+          </div>
+          <select id="categorySelect" class="category-select"></select>
+        </div>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+
+      <div class="empty-state" id="emptyState">
+        <strong>No products found.</strong>
+        <p>Try searching another product name or category.</p>
+      </div>
+    </section>
+
+    <section id="orders" class="orders">
+      <div class="orders-wrap">
+        <p class="section-label">Account</p>
+        <h2 class="section-title">Your Orders</h2>
+        <div id="ordersContainer" class="orders-container"></div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about-grid">
+        <div>
+          <p class="section-label">About the Brand</p>
+          <h2 class="section-title">Built from grind, printed with purpose.</h2>
+        </div>
+        <div class="about-text">
+          <p>Grit Studios is a clothing brand for people who move with purpose. The brand combines clean minimal wear with graphic pieces inspired by hustle, discipline, and creative work.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="contact-wrap">
+        <div class="contact-card">
+          <div class="contact-layout">
+            <div class="contact-copy">
+              <p class="section-label">Contact</p>
+              <h2 class="section-title">Ready for custom orders?</h2>
+              <p>Message us for bulk orders, custom shirt printing, collaborations, or upcoming drops.</p>
+            </div>
+            <div class="contact-actions">
+              <a href="https://www.instagram.com/grt.stds/" target="_blank" rel="noopener noreferrer">
+                <button class="button button-solid" type="button">
+                  <span data-icon="instagram"></span>
+                  <span data-brand="instagram"></span>
+                </button>
+              </a>
+              <a href="mailto:officialgritstds@gmail.com">
+                <button class="button button-outline" type="button">
+                  <span data-icon="mail"></span>
+                  Email Us
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-wrap">
+      <p><strong>© 2026 <span data-brand="name"></span>. All rights reserved.</strong></p>
+
+    </div>
+  </footer>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content cart-modal-content">
+      <div class="modal-header">
+        <h2>Shopping Cart</h2>
+        <button class="close-cart" type="button">✕</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total-row">
+          <span>Total:</span>
+          <span id="cartTotal">₱0</span>
+        </div>
+        <button class="button button-solid checkout-btn" type="button">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div id="checkoutModal" class="modal">
+    <div class="modal-content checkout-modal-content">
+      <div class="modal-header">
+        <h2>Checkout</h2>
+        <button class="close-checkout" type="button" onclick="closeCheckoutModal()">✕</button>
+      </div>
+      <div class="checkout-container">
+        <form id="checkoutForm" class="checkout-form">
+          <h3>Shipping Information</h3>
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="address">Address *</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="city">City *</label>
+            <input type="text" id="city" name="city" required>
+          </div>
+          <div class="form-group">
+            <label for="zipCode">Zip Code *</label>
+            <input type="text" id="zipCode" name="zipCode" required>
+          </div>
+
+          <h3>Order Summary</h3>
+          <div id="orderSummary" class="order-summary"></div>
+
+          <h3>Payment Method</h3>
+          <div class="form-group">
+            <label for="paymentMethod">Select Payment Method *</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+              <option value="">Choose a method...</option>
+              <option value="gcash">GCash</option>
+              <option value="paypal">PayPal</option>
+              <option value="bank-transfer">Bank Transfer</option>
+              <option value="cod">Cash on Delivery</option>
+            </select>
+          </div>
+
+          <button type="submit" class="button button-solid submit-order-btn">Place Order</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
